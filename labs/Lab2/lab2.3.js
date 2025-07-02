@@ -16,7 +16,7 @@ if(bmi < 18.5){
     let reasonableWeightMin = 22*height*height;
     let reasonableWeightMax = 24*height*height;
     console.log("You are good. Stay fit");
-    console.log("But i recommend to keep yourself around " + reasonableWeightMin + " to " + reasonableWeightMax + " is the best. ");
+    if(weight < reasonableWeightMin || weight > reasonableWeightMax) console.log("But i recommend to keep yourself around " + reasonableWeightMin + " to " + reasonableWeightMax + " is the best. ");
 }else if(nmi<29.9){
     console.log("You are OVERWEIGHT");
     let leastWeightDecrease = 24.89*height*height;
