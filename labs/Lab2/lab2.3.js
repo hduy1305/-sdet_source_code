@@ -12,13 +12,13 @@ if(bmi < 18.5){
     console.log("You should increase atleast " + toIncrease.toFixed(2) + "kilos.");
     console.log("And then keep yourself around " + reasonableWeightMin + " to " + reasonableWeightMax + ".");
     
-}else if(bmi<24.9){
+}else if(bmi<=24.9){
     console.log("You are NORMAL");
     let reasonableWeightMin = (22*height*height).toFixed(2);
     let reasonableWeightMax = (24*height*height).toFixed(2);
     console.log("You are good. Stay fit");
     if(weight < reasonableWeightMin || weight > reasonableWeightMax) console.log("But i recommend to keep yourself around " + reasonableWeightMin + " to " + reasonableWeightMax + " is the best. ");
-}else if(bmi<29.9){
+}else if(bmi<=29.9){
     console.log("You are OVERWEIGHT");
     let leastWeightDecrease = (24.89*height*height).toFixed(2);
     let reasonableWeightMin = (22*height*height).toFixed(2);
