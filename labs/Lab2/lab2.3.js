@@ -56,3 +56,10 @@ if(bmi < 18.5){
     }
     console.log("After that you can maintain your weight around " + reasonableWeightMin + " to " + reasonableWeightMax + " is the best. ");
 }
+
+
+
+module.exports = {
+    renameFn: fn1, // ten de su dung tham chieu khi import boi cac file khac
+    fn2
+}
