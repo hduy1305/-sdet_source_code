@@ -1,14 +1,17 @@
 
 let intArr = [1, 2, 3, 4, 5];
-let countOdd = 0;
-let countEven = 0;
+let EvenNumbers = countEven(intArr);
+let OddNumbers = intArr.length - EvenNumbers;
 
-for(let i=0;i<intArr.length;i++){
-    if(intArr[i] % 2 === 0){
-        countEven++;
-    }else{
-        countOdd++;
+console.log(`Even Numbers: ${EvenNumbers}`);
+console.log(`Odd Numbers: ${OddNumbers}`);
+
+function countEven(arr){
+    let count = 0;
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] % 2 === 0){
+            count++;
+        }
     }
-}
-console.log("Even Numbers: " + countEven);
-console.log("Odd Numbers: "+ countOdd);
+    return count;
+};

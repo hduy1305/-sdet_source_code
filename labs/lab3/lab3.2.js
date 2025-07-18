@@ -9,5 +9,5 @@ for(let i = 0;i<intArr.length;i++){
     if(intArr[i] < min) min = intArr[i];
 }
 
-console.log("Minimum: " + min);
-console.log("Maximum: "+ max);
+console.log(`Minimum: ${min}`);
+console.log(`Maximum: ${max}`);
