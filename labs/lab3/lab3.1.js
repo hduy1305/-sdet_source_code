@@ -1,10 +1,10 @@
 
 let intArr = [1, 2, 3, 4, 5];
-let EvenNumbers = countEven(intArr);
-let OddNumbers = intArr.length - EvenNumbers;
+let evenNumbers = countEven(intArr);
+let oddNumbers = intArr.length - evenNumbers;
 
-console.log(`Even Numbers: ${EvenNumbers}`);
-console.log(`Odd Numbers: ${OddNumbers}`);
+console.log(`Even Numbers: ${evenNumbers}`);
+console.log(`Odd Numbers: ${oddNumbers}`);
 
 function countEven(arr){
     let count = 0;

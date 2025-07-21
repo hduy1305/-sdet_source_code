@@ -1,7 +1,7 @@
 let input = [12, 34, 1, 16, 28]
 
-let SortedInput = sortArray(input);
-console.log(`Output: ${SortedInput}`);
+let sortedInput = sortArray(input);
+console.log(`Output: ${sortedInput}`);
 
 function sortArray(arr){
     for(let i=0;i<arr.length;i++){
