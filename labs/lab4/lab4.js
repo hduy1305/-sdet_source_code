@@ -82,11 +82,5 @@ function findAccount(bankAccounts, number){
 
 function updateBalance(bankAccount, withdrawAmount){
     bankAccount.balance -= withdrawAmount;
-    return bankAccount; // return the updated account object
+    return bankAccount; 
 }
-
-//account.balance still not updated after withdraw
-//because of the reference type, we need to return the updated object
-//and assign it to the original object in the main application loop
-//or we can use Object.assign() to update the original object directly
-//but in this case, we are returning a new object with updated balance
