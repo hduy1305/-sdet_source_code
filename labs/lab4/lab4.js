@@ -15,7 +15,6 @@ let bankAccount3 = JSON.parse(JSON.stringify(bankCountNumber));
 bankAccount3.accountNumber = "323456789";
 
 let bankAccounts = [bankAccount1, bankAccount2, bankAccount3];
-const {accountNumber, balance} = bankAccounts;
 
 //application
 let exit = false;
