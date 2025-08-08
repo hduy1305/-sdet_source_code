@@ -18,6 +18,7 @@ let bankAccounts = [bankAccount1, bankAccount2, bankAccount3];
 
 //application
 let exit = false;
+
 while(!exit){
     console.log("=== Banking application ===");
     console.log("1. Find an account");
@@ -27,7 +28,7 @@ while(!exit){
     switch(userOption){
         case 1:
             let userInputNumber = readline.question("Input your account's number: ");
-            let findAcc = findAccount(bankAccounts, userInputNumber);
+            let findAcc = findAccount(userInputNumber);
             if(findAcc === null){
                 console.log(`No account was found with numbers: ${userInputNumber}`);
             }
@@ -39,7 +40,7 @@ while(!exit){
             break;
         case 2:
             let inputWithdrawAccountNumber = readline.question("Input account's number you want to withdraw: ");
-            let findWithdrawAccountNumber = findAccount(bankAccounts, inputWithdrawAccountNumber);
+            let findWithdrawAccountNumber = findAccount(inputWithdrawAccountNumber);
             if(findWithdrawAccountNumber === null){
                 console.log(`No account was found with numbers: ${inputWithdrawAccountNumber}`);
             }
@@ -62,7 +63,7 @@ while(!exit){
             exit = true;
             break;
         default:
-            console.log("Invalid number - No function was found");
+            console.log("Invalid - No function was found");
     }
     console.log("- - - - - - - - - - - - - - - -");
 }
@@ -70,7 +71,7 @@ while(!exit){
 
 
 
-function findAccount(bankAccounts, number){
+function findAccount(number){
     for(const account of bankAccounts){
         if(account.accountNumber === number){
             return account;
