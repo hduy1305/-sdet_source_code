@@ -32,9 +32,9 @@ function getUserInput(){
 
 function countWords(userInput){
     
-    let processedInput = userInput.trim();
+    let processedInput = userInput.trim().replace(/[.,!?;:()]/g, "");
     if(processedInput === "") return "You typed nothing!";
-    let words = processedInput.split(/\s+/); 
+    let words = processedInput.split(/\s+/);
 
     let wordsCount = {};
     for(let i = 0;i<words.length;i++){
@@ -45,6 +45,3 @@ function countWords(userInput){
     
     return wordsCount;
 }
-
-//still not working with special characters
-//e.g. "Hello, world! Hello." should return { hello: 2, world: 1 }
