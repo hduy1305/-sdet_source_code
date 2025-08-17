@@ -31,7 +31,7 @@ function getUserInput(){
 }
 
 function countWords(userInput){
-    
+
     let processedInput = userInput.trim().replace(/[.,!?;:()]/g, "");
     if(processedInput === "") return "You typed nothing!";
     let words = processedInput.split(/\s+/);
