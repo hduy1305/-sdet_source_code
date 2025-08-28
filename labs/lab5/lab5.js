@@ -38,7 +38,7 @@ function countWords(userInput){
 
     let wordsCount = {};
     for(let i = 0;i<words.length;i++){
-        if(wordsCount[words[i]] >= 1){
+        if(wordsCount[words[i]]){
             wordsCount[words[i]]++;
         }else wordsCount[words[i]] = 1;
     } 
