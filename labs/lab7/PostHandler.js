@@ -2,12 +2,14 @@ const Post = require("./PostModel");
 const RequestHandler = require("./RequestHandler");
 const readline = require("readline-sync");
 
+//console.log("🍎 Apple, 🍌 Banana, 🍊 Orange");
+let baseUrl = `https://jsonplaceholder.typicode.com`;
 lab11();
 
 async function lab11(){
     message();
     let userOption = getUserInput();
-    let requestHandler = new RequestHandler();
+    let requestHandler = new RequestHandler(baseUrl);
 
     if(userOption === "1"){
         let userId = Number(readline.question("Input userId: "));
