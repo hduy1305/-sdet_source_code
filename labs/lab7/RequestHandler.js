@@ -15,14 +15,14 @@ class RequestHandler{
         
         let filterPost = await this._getAllPosts(userId);
 
-        let postModel = new Post();
-        for(let post of filterPost){
-            if(post.id === postId){
-                postModel.title = post.title;
-                postModel.body = post.body;
-                break;
-            }
+        let targetPost = filterPost.find(function (post){
+            return post.id === postId;
+        })
+        if(targetPost){
+            const {body, title} = targetPost
+            postModel = new Post(body, title);
         }
+        else return null;
 
         return postModel;
     }
@@ -31,9 +31,8 @@ class RequestHandler{
         let arrayPosts = [];
         let allPosts = await this._getAllPosts(userId);
         for(let post of allPosts){
-            let postObject = new Post();
-            postObject._body = post.body;
-            postObject._title = post.title;
+            const {body, title} = post
+            let postObject = new Post(body, title);
             arrayPosts.push(postObject);
         }
         return arrayPosts;
