@@ -1,7 +1,7 @@
 export default class Animal {
 
-    private name: string = "Animal";
-    private speed: number = 0;
+    protected name: string = "Animal";
+    protected speed: number = 0;
 
     protected setSpeed(speed: number){
         this.speed = speed;
