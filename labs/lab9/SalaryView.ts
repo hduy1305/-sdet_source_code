@@ -9,7 +9,7 @@ const fteNumber2 = new FullTimeEmployee();
 const ceNumber1 = new ContractEmployee();
 const ceNumber2 = new ContractEmployee();
 const ceNumber3 = new ContractEmployee();
-let employeeList = [fteNumber1, fteNumber2, ceNumber1, ceNumber2, ceNumber3];
+const employeeList = [fteNumber1, fteNumber2, ceNumber1, ceNumber2, ceNumber3];
 
 const salaryController = new SalaryController();
 salaryController.calculateTotalSalary(employeeList);
